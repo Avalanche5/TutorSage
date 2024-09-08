@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TutorSage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="TutorSage.png" alt="TutorSage Logo" />
+        </div>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="#intro-section" class="header__menu-link">Home</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#services" class="header__menu-link">Services</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#tutoring" class="header__menu-link">Get a Tutor</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#contact" class="header__menu-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="intro-section" class="intro">
+        <img
+          src="tutorSage.png"
+          alt="TutorSage Small Logo"
+          class="intro__image"
+        />
+        <div class="intro__text-btn">
+      <p class="bigtext">Welcome to TutorSage™</p>
+        <p class="intro__text">
+          At TutorSage, we’re dedicated to helping students reach their academic
+          goals. Our experienced tutors provide personalized support 
+          tailored learning.  
+        </p>
+        <a class="intro__btn" href="#contact" class="header__menu-link">Get a Tutor</a>
+      </div>
+    </div>
+
+    <!-- Home Section -->
+    <div id="question-section" class="home">
+      <div class="home__container">
+        <h2 class="home__title">
+          What are kind of tutoring are you looking for?
+        </h2>
+        <div class="home__buttons">
+          <div class="home__button-container">
+            <button class="home__button" onclick="toggleDropdown('affordable')">
+              Affordable
+            </button>
+            <div id="affordable" class="home__dropdown">
+              TutorSage offers great rates that make high-quality tutoring
+              accessible to everyone. We currently have a discount for 2024!
+            </div>
+          </div>
+          <div class="home__button-container">
+            <button class="home__button" onclick="toggleDropdown('passionate')">
+              Passionate Tutoring
+            </button>
+            <div id="passionate" class="home__dropdown">
+              Our tutors are passionate about teaching and go the extra mile to
+              ensure students succeed. You can test this out for yourself with a
+              FREE 30-minute lesson.
+            </div>
+          </div>
+          <div class="home__button-container">
+            <button
+              class="home__button"
+              onclick="toggleDropdown('knowledgeable')"
+            >
+              Knowledgeable Tutors
+            </button>
+            <div id="knowledgeable" class="home__dropdown">
+              TutorSage has a team of highly knowledgeable tutors with expertise
+              in many subjects, which you can see in the Services section.
+            </div>
+          </div>
+          <div class="home__button-container">
+            <button class="home__button" onclick="toggleDropdown('patience')">
+              Patient
+            </button>
+            <div id="patience" class="home__dropdown">
+              Our tutors are patient and tailor their teaching methods to meet
+              each student's needs.
+            </div>
+          </div>
+          <div class="home__button-container">
+            <button class="home__button" onclick="toggleDropdown('available')">
+              Available
+            </button>
+            <div id="available" class="home__dropdown">
+              TutorSage offers highly flexible scheduling, with availability during after-school hours on weekdays and throughout the entire day on weekends.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="services" class="services">
+      <div class="services__container">
+        <h2 class="services__title">Our Services</h2>
+        <p class="services__description">
+          We offer online K-10 tutoring for the following subjects:
+        </p>
+        <ul class="services__list">
+          <li>
+            <strong>Math:</strong> Basic math, Pre-Algebra, Algebra, Calculus,
+            etc.
+          </li>
+          <li>
+            <strong>Science:</strong> Basic Science, Chemistry, Physics, etc.
+          </li>
+          <li><strong>Coding:</strong> Scratch, Python, Java, HTML, JavaScript, CSS.</li>
+        </ul>
+        <p class="services__info">
+          If you're looking for something else, feel free to contact us, and we'll ensure we meet your needs.
+        </p>
+        <p class="services__hours">
+          <strong>Weekdays:</strong> 4 PM - 9 PM<br /><strong>Weekends:</strong>
+          9 AM - 9 PM
+        </p>
+        <p class="services__pricing">
+          <strong>Pricing:</strong><br />FREE 30-minute lesson (first lesson)<br /><span
+            class="services__discount"
+            >$9.99</span
+          >
+          <strong>$8.99</strong> per 30-minute lesson (-10% off for 2024)
+        </p>
+      </div>
+    </section>
+
+    <section id="tutoring" class="tutoring">
+      <div class="tutoring__container">
+        <h2 class="tutoring__title">Get a Tutor</h2>
+        <p class="tutoring__text">
+          Ready to start your tutoring journey with TutorSage? We're here to
+          help you succeed! To get started, please head over to the
+          <a href="#contact" class="tutoring__link">Contact</a> section and
+          reach out to us. Tell us what you're looking for, and we’ll be in
+          touch shortly.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact__container">
+        <h2 class="contact__title">Contact Us</h2>
+        <p class="contact__text">
+          We’re excited to help you achieve your academic goals! Please fill out
+          the form below to get in touch with us, and we’ll respond as soon as
+          possible.
+        </p>
+        <form
+          class="contact__form"
+          action="mailto:tutorsage01@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="contact__form-group">
+            <label for="name" class="contact__label">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="contact__input"
+              required
+            />
+          </div>
+          <div class="contact__form-group">
+            <label for="email" class="contact__label">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="contact__input"
+              required
+            />
+          </div>
+          <div class="contact__form-group">
+            <label for="message" class="contact__label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              class="contact__textarea"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="contact__button">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
